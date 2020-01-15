@@ -9,5 +9,6 @@ defmodule KoroibosExWeb.Router do
 		pipe_through :api
 		get "/olympians", OlympiansController, :index
 		get "/olympian_stats", StatsController, :show
+		get "/events", EventsController, :index
   end
 end

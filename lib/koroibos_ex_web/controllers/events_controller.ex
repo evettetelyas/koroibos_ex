@@ -5,7 +5,7 @@ defmodule KoroibosExWeb.EventsController do
 	action_fallback KoroibosEx.FallbackController
 
 	def index(conn, _params) do
-		render conn, "event.json", events: Events.all()
+		render conn, "index.json", events: Events.all_sports()
 	end
 
 end

@@ -8,7 +8,7 @@ defmodule KoroibosExWeb.EventsView do
 	
 	def render("show.json", %{event: event}) do
     %{data: render_one(event, KoroibosExWeb.EventsView, "event.json", as: :event)}
-  end
+	end
 	
 	def render("event.json", %{event: [event]}) do
 		%{

@@ -9,7 +9,10 @@ defmodule KoroibosExWeb.EventsController do
 	end
 
 	def show(conn, params) do
-		render conn, "show.json", event: Events.get_event(params["id"])
+		case Events.get_event(params["id"]) do
+			[] -> KoroibosEx.FallbackController.call(conn, {:error, :not_found})
+			_ -> render conn, "show.json", event: Events.get_event(params["id"])
+		end
 	end
 
 end

@@ -7,10 +7,10 @@ defmodule KoroibosExWeb.EventsView do
 	end
 	
 	def render("show.json", %{event: event}) do
-    %{data: render_one(event, KoroibosExWeb.EventsView, "event.json", as: :event)}
-  end
+    %{data: render_one(event, KoroibosExWeb.EventsView, "medalist.json", as: :event)}
+	end
 	
-	def render("event.json", %{event: [event]}) do
+	def render("medalist.json", %{event: [event]}) do
 		%{
 			event: event,
 			medalists: Enum.map(Events.get_medalists(event), fn olympian -> 
@@ -21,6 +21,13 @@ defmodule KoroibosExWeb.EventsView do
 					medal: olympian.medal
 				}
 			end)
+		}
+	end
+
+	def render("event.json", %{event: event}) do
+		%{
+			sport: event,
+			events: Events.all_events(event)
 		}
 	end
 end

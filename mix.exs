@@ -40,7 +40,8 @@ defmodule KoroibosEx.MixProject do
       {:postgrex, ">= 0.0.0"},
 			{:gettext, "~> 0.11"},
 			{:csv, "~> 2.3"},
-      {:jason, "~> 1.0"},
+			{:jason, "~> 1.0"},
+			{:ex_machina, "~> 2.3", only: :test},
       {:plug_cowboy, "~> 2.0"}
     ]
   end

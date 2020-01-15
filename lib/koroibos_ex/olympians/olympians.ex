@@ -25,4 +25,11 @@ defmodule KoroibosEx.Olympians.Olympians do
 		[num] = Repo.all(query)
 		num
 	end
+
+	def get_events do
+		query = from o in Olympian,
+						select: [o.event, o.sport]
+
+		Repo.all(query)
+	end
 end

@@ -5,7 +5,7 @@ defmodule KoroibosEx.Factory do
 	  %KoroibosEx.Olympians.Olympian{
 			name: sequence("evette"),
 			sex: "F",
-			age: sequence("#{1}"),
+			age: 10,
 			height: 100,
 			weight: 100,
 			team: "USA",

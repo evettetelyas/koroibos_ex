@@ -47,11 +47,11 @@ defmodule KoroibosEx.OlympiansControllerTest do
     
 	  assert json_response(conn, 200) == %{
 			"data" => [%{
-					"name" => Enum.at(olympians, 1).name,
-					"age" => Enum.at(olympians, 1).age,
-					"sport" => Enum.at(olympians, 1).sport,
-					"team" => Enum.at(olympians, 1).team,
-					"total_medals_won" => 1
+					"name" => Enum.at(olympians, 0).name,
+					"age" => Enum.at(olympians, 0).age,
+					"sport" => Enum.at(olympians, 0).sport,
+					"team" => Enum.at(olympians, 0).team,
+					"total_medals_won" => 0
 				}]
 			}
 	end

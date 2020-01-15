@@ -8,7 +8,7 @@ defmodule KoroibosEx.StatsControllerTest do
     
 	  assert json_response(conn, 200) == %{
 			"olympian_stats" => %{
-					"average_age" => "16.5000000000000000",
+					"average_age" => "10.0000000000000000",
 					"average_weight" => %{
 							"female_olympians" => "100.0000000000000000",
 							"male_olympians" => nil,

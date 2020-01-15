@@ -5,7 +5,8 @@ defmodule KoroibosExWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", KoroibosExWeb do
-    pipe_through :api
+  scope "/api/v1", KoroibosExWeb do
+		pipe_through :api
+		get "/olympians", OlympiansController, :index
   end
 end

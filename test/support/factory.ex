@@ -5,14 +5,14 @@ defmodule KoroibosEx.Factory do
 	  %KoroibosEx.Olympians.Olympian{
 			name: sequence("evette"),
 			sex: "F",
-			age: 30,
+			age: sequence("#{1}"),
 			height: 100,
 			weight: 100,
-			team: "USA"
-			games: "2020"
-			sport: "Beatboxing"
-			event: "Untz Untz"
-			medal: sequence(:medal, [nil, "Gold", "Bronze", "Silver"])
+			team: "USA",
+			games: "2020",
+			sport: "Beatboxing",
+			event: "Untz Untz",
+			medal: sequence(:medal, [nil, "Gold"])
 	  }
 	end
 

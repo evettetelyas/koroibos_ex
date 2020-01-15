@@ -10,5 +10,6 @@ defmodule KoroibosExWeb.Router do
 		get "/olympians", OlympiansController, :index
 		get "/olympian_stats", StatsController, :show
 		get "/events", EventsController, :index
+		get "/events/:id/medalists", EventsController, :show
   end
 end

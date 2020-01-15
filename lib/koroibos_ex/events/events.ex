@@ -3,6 +3,7 @@ defmodule KoroibosEx.Events.Events do
 
   alias KoroibosEx.Repo
 	alias KoroibosEx.Events.Event
+	alias KoroibosEx.Olympians.Olympian
 
 	def all_sports do
 		query = from e in Event,
@@ -17,6 +18,23 @@ defmodule KoroibosEx.Events.Events do
 						select: e.name,
 						where: e.sport == ^sport,
 						distinct: e.name
+
+		Repo.all(query)
+	end
+
+	def get_event(id) do
+		query = from e in Event,
+						select: e.name,
+						where: e.id == ^id
+
+		Repo.all(query)
+	end
+
+	def get_medalists(name) do
+		query = from o in Olympian,
+						# select: [o.name, o.age, o.team, o.medal],
+						where: o.event == ^name,
+						where: not is_nil(o.medal)
 
 		Repo.all(query)
 	end

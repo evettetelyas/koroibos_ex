@@ -1,10 +1,11 @@
-# KoroibosEx
+# Koroibos
 
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
-  * Import data with `mix olympians`
+  * Import olympic data with `mix olympians`
+  * Import event data with `mix events`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

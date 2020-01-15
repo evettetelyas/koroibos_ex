@@ -12,4 +12,8 @@ defmodule KoroibosExWeb.OlympiansController do
 		end
 	end
 
+	def stats(conn, _params) do
+		render conn, "stats.json", stat: Olympians.get_stats()
+	end
+
 end

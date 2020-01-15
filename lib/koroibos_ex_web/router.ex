@@ -8,5 +8,6 @@ defmodule KoroibosExWeb.Router do
   scope "/api/v1", KoroibosExWeb do
 		pipe_through :api
 		get "/olympians", OlympiansController, :index
+		get "/olympian_stats", StatsController, :show
   end
 end

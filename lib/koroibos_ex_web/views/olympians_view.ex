@@ -4,7 +4,7 @@ defmodule KoroibosExWeb.OlympiansView do
   
 	def render("index.json", %{olympians: olympians}) do
     %{data: render_many(olympians, KoroibosExWeb.OlympiansView, "olympian.json", as: :olympian)}
-  end
+	end
 
   def render("olympian.json", %{olympian: olympian}) do
     %{
@@ -14,5 +14,5 @@ defmodule KoroibosExWeb.OlympiansView do
       sport: olympian.sport,
       total_medals_won: Olympians.total_medals(olympian)
       }
-  end
+	end  
 end
